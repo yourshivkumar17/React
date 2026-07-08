@@ -84,4 +84,31 @@ export default App;-------------------------------
  email:"shiv@gmail.com"
 }
 
-Name bhi bach gaya.
+Name bhi bach gaya.-----------------------------------
+
+  बहुत ज़रूरी टॉपिक है। React में object state का उपयोग तब करते हैं जब एक ही state में कई related values रखनी हों।
+
+1. Object State बनाना
+
+मान लो एक user की जानकारी रखनी है।
+
+import { useState } from "react";
+
+function App() {
+
+  const [user, setUser] = useState({
+    name: "Shiv",
+    age: 21,
+    city: "Agra"
+  });
+
+  return (
+    <div>
+      <h2>Name : {user.name}</h2>
+      <h2>Age : {user.age}</h2>
+      <h2>City : {user.city}</h2>
+    </div>
+  );
+}
+
+export default App;
